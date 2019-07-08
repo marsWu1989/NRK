@@ -15,3 +15,13 @@
         1. "xxx_redirect": "https://m.xxx.com", 添加跳转域名
         2. "port": "NNNN"  手动添加端口号 如：9527
     访问 0.0.0.0:NNNN
+
+## 手动添加
+    添加路由
+    在./lib/render.jsx   import xxx_route from './../projects/xxx/routes/client'; 
+    const routes = {
+        xxx: xxx_route
+    }
+    添加命令 
+    npm run build:xxx
+    npm run start:xxx
