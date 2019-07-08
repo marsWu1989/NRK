@@ -9,16 +9,8 @@ import { IntlProvider, addLocaleData } from 'react-intl';
 import zh from 'react-intl/locale-data/zh';
 import zhCN from './../locale/zh_CN';
 
-import web_pc_route from './../projects/web_pc/routes/client';
-import web_m_route from './../projects/web_m/routes/client';
-import foxio_pc_route from './../projects/foxio_pc/routes/client';
 const project = process.env.NODE_ENV;
-const routes = {
-    web_pc: web_pc_route,
-    web_m: web_m_route,
-    foxio_pc: foxio_pc_route
-}
-const Routers = routes[project];
+const Routers = require(`./../projects/${project}/routes/client`).default;
 console.log(Routers, project)
 addLocaleData(zh);
 // render first screen

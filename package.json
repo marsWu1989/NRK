@@ -5,16 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "NODE_ENV=web_pc node bin/entry.js",
-    "start:foxio_pc": "NODE_ENV=foxio_pc node bin/entry.js",
-    "start:foxio_m": "NODE_ENV=foxio_m node bin/entry.js",
-    "start:web_pc": "NODE_ENV=web_pc node bin/entry.js",
-    "start:web_m": "NODE_ENV=web_m node bin/entry.js",
+    "start:demo": "NODE_ENV=demo node bin/entry.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:web_pc": "webpack --env.project=web_pc",
-    "build:web_m": "webpack --env.project=web_m",
-    "build:foxio_pc": "webpack --env.project=foxio_pc",
-    "build:foxio_m": "webpack --env.project=foxio_m",
-    "build:react": "webpack --config react.config.js",
+    "build:demo": "webpack --env.project=demo",
     "create": "node createProject.js"
   },
   "author": "yongchao.wu@cleargrass.com",

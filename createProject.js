@@ -1,11 +1,18 @@
 const fs = require('fs');
 const buffer = require('buffer');
 const project = process.argv.splice(2);
-console.log(process)
+console.log(process);
+let package = fs.readFileSync('./package.json', 'utf8').split('\n'); 
 if (project.length < 1) {
     console.log("项目名有误")
     return;
 }
+console.log(package);
+const data = [
+  `"start:${project}": "NODE_ENV=${project} node bin/entry.js",\n"build:${project}": "webpack --env.project=${project}",`
+]
+package.splice(6, 0, data);
+fs.writeFileSync('./package.json', package.join('\n'), 'utf8')
 const update_dir = {
     projectDir: `./projects/${project}`,
     compontentsDir: `./projects/${project}/components`,
@@ -414,7 +421,7 @@ export default Demo2;`,
                 }
             )
            console.log("文件 demo2 index 打开成功！");
+          console.log('项目创建成功');
         });
-        console.log('项目创建成功');
     }
 })();
