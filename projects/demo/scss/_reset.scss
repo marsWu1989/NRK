@@ -1,0 +1,79 @@
+html {
+    -webkit-tap-highlight-color: transparent;
+    -moz-tap-highlight-color: transparent;
+    outline: 0;
+    font-size: 12px;
+    font-family: "PingFang SC","Microsoft YaHei";
+}
+// reset default margin
+body,
+ul,
+p,
+dl,
+dd,
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+
+// reset default padding
+ul {
+    padding: 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+body {
+    margin: 0 auto;
+    background: #eeeeee;
+}
+
+h1,
+h2,
+h3,
+em,
+b,
+strong {
+    font-weight: 100;
+}
+
+%clearfix{
+    &:before,
+    &:after {
+        content: ' ';
+        display: table;
+        font: 0/0 a;
+    }
+    &:after {
+        clear: both;
+    }
+}
+sup {
+    vertical-align: super;
+    font-size: smaller;
+}
+%large {
+    padding: 0 0 10px 0;
+    font-size: 36px;
+    font-weight: bold;
+    opacity: .9;
+}
+%little {
+    padding: 0 0 10px 0;
+    font-size: 20px;
+    // opacity: .8;
+}
+%normal {
+    padding: 0 0 10px 0;
+    font-size: 15px;
+    font-weight: 300;
+}
+%small {
+    padding: 0 0 10px 0;
+    font-size: 12px;
+    font-weight: 300;
+}
